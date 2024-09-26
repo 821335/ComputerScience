@@ -5,6 +5,12 @@
 #and ran the lion away
 #The bear was very large and angry.
 
+#Ask for the world
+#Ask for the animal
+#Ask for what the animal is doing
+#Ask what other animal appeared
+#Ask how the other animal was like
+
 
 user_input = input("Once upon a time, in a Big world,")
 user_input = input("there lived a Cruel lion.")
