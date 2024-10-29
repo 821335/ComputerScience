@@ -234,7 +234,7 @@ def big_animal(): # chose an option for this encounter
 
         big_animal()
 
-def grab_sword():
+def grab_sword():       # what happens when you chose an option from the encounter
     print("you grabbed a sword you noticed near by and started attacking the bear. This was a mistake you miss your swing with the sword and the bear steps on you with your paws. when he stepped on you it pushed you into the ground and you were stuck forever. adventure ends here") #ending
 
 def out_run_bear():
@@ -243,7 +243,7 @@ def out_run_bear():
 def go_around_bear():
     print("You go around the bear and he lets you pass. The bear likes that you didn't try any tricks to get past and allows you to exit the woods and continue your route east ") 
 
-def traveling_north():
+def traveling_north(): # chose an option you want to do for the encoutner
     print("You were able to restock on your materials for your route north. Your almost finished with your route north but now you have to cross a dangerous mountain to finish. Do you")
     print("1. try to climb the mountain and cross it even if it's extremly dangerous")
     print("2. Travel around the mountain on a random route you know nothing about")
@@ -259,4 +259,35 @@ def traveling_north():
 
         traveling_north()
 
-             
+def climb_mountain():   # what happens for each option 
+    print("Even though it was dangerous to climb the mountain you made it safely over and find the final destination north")
+
+def go_around_mountain():
+    print("You though it would be safer to go around the mountain but you were wrong. You took a random route and it was a dead end you were stranded forever. Unforunately your done forever") #ending
+
+def exit_woods(): # chose what you want to do for the encounter
+    print("The bear let you past and you exited the woods. You see your final destination. Do you")
+    print("1. Go to the final spot")
+    print("2. Stay where you are because you don't want to finish your journey yet.")
+
+    choice = input("> ")
+
+    if choice == "1":
+        final_destination()
+    elif choice == "2":
+        stay_put()
+    else:
+        print("you can't do that try again")
+
+        exit_woods()
+
+def final_destination(): # what happens from your choice
+    print("congratulations you have finished your journey east. Your story comes to a happy ending here")       #ending
+
+def stay_put():
+    print("You wanted to keep going and not end your journey. unfortunately you made a bad mistake by staying put because the final detination spot pulls anyone in there that is close. But by pulling you into the final destination the forces used tear you apart. Your journey comes to a gruesome end")   #ending
+
+def final_north():
+    print("Congrats on passing the mountain and every other challenge you have made it to the final destination. unfortunately this means your time comes to an end. Adveneture over")
+
+print("thanks for playing please try again")        #final, thanks for playing.

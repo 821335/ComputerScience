@@ -1,23 +1,21 @@
-def start_adventure():
-    print("You stand at the entrance of a dark forest. Do you:")
-    print("1. Enter the forest")
-    print("2. Turn back and go home")
-    
-    choice = input("> ")
-    
+def start_adventure(): #start function
+    print("Welcome to the start of your exploration chose a route to travel. Do you:")
+    print("1.  north") # 3 player choices
+    print("2.  east")
+    print("4.  west")
+    choice = input(" chose an option to continue on")
     if choice == "1":
-        enter_forest()
+        travel_north()
     elif choice == "2":
-        go_home()
+        travel_east()
+    elif choice == "4":
+        travel_west()
     else:
-        print("Invalid choice. Try again.")
+        print("Wrong choice. Try again.")
         start_adventure()
-
-def enter_forest():
-    print("You bravely step into the forest and hear strange noises...")
-    # More encounters and choices follow
-
-def go_home():
-    print("You decide it's safer at home, but your adventure ends here.")
-    # End of the game or new encounters
-
+def travel_north(): # what happens when you chose one of the 3 options
+    print("You start walking north but realize it's to cold")
+def travel_east():
+    print("You start riding your horse east until you find something disturbing on the way")
+def travel_west():
+    print("You start traveling west but end up in the middle of a dessert")
