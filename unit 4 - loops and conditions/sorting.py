@@ -30,3 +30,7 @@ def bubble_sort(nums):  #take the list as a parameter
 
 
 bubble_sort(nums)
+
+
+
+
