@@ -13,4 +13,4 @@ while True:
                     cp.pixels[i] = (0, 255, 0)
                 
                 cp.pixels.brightness = 0.02
-                
+                # not finished
