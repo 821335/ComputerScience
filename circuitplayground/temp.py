@@ -2,57 +2,34 @@ from adafruit_circuitplayground import cp
 
 cp.pixels.brightness = 0.02
 
+temp_numbers = [78, 79, 80, 81, 82, 83, 84, 85, 86]
+
+colors = [
+    (0, 0, 1),
+    (0, 0, 1),
+    (0, 0, 1),
+    (1, 1, 0),
+    (1, 1, 0),
+    (1, 1, 0),
+    (1, 1, 0),
+    (1, 0, 0),
+    (1, 0, 0),
+    (1, 0, 0),
+]
+
+
 while True:
-    temp = cp.tempature * 9/5 + 32
+    temp_c = cp.temperature
+    temp_f = (temp_c * 9 / 5) + 32
+    print(f"temperature:  {temp_f:.2f}    °f") 
 
-    if temp < 60:
-        cp.pixels[0] = (0, 0, 255)
-    else:
-        cp.pixels[0] = (0, 0, 0)
-
-    if temp > 60:
-        cp.pixels[1] = (28, 0, 227)
-    else:
-        cp.pixels[1] = (0, 0, 0)
-
-    if temp > 64:
-        cp.pixels[2] = (57, 0, 199)
-    else:
-        cp.pixels[2] = (0, 0, 0)
-
-    if temp > 68:
-        cp.pixels[3] = (85, 0, 170)
-    else:
-        cp.pixels[3] = (0, 0, 0)
-
-    if temp > 72:
-        cp.pixels[4] = (113, 0, 142)
-    else:
-        cp.pixels[4] = (0, 0, 0)
-
-    if temp > 76:
-        cp.pixels[5] = (142, 0, 113)
-    else:
-        cp.pixels[5] = (0, 0, 0)
-
-    if temp > 80:
-        cp.pixels[6] = (170, 0, 85)
-    else:
-        cp.pixels[6] = (0, 0, 0)
-    
-    if temp > 84:
-        cp.pixels[7] = (199, 0, 57)
-    else:
-        cp.pixels[7] = (0, 0, 0)
-    
-    if temp > 88:
-        cp.pixels[8] = (227, 0, 28)
-    else:
-        cp.pixels[8] = (0, 0, 0)
-
-    if temp > 92:
-        cp.pixels[9] = (255, 0, 0)
-    else:
-        cp.pixels[9] = (0, 0, 0)
-
-    cp.pixels.show()
+    for i in range(10):
+        if i == 0:
+            if temp_f < 78:
+                cp.pixels[i] = colors[i]
+            else:
+                cp.pixels[i] = (0, 0, 0)
+        elif temp_f > temp_numbers[i - 1]:
+            cp.pixels[i] = colors[i]
+        else:
+            cp.pixels[i] = (0, 0, 0)
